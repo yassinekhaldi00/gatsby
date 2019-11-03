@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 const ArticleTemplate = ({ data }) => (
   <Layout>
     <h1>{data.strapiArticale.title}</h1>
-    <p>{data.strapiArticale.author.username}</Link></p>
+    <p>by <Link to={`/author/User_${data.strapiArticale.author.id}`}>{data.strapiArticale.author.username}</Link></p>
     <Img fluid={data.strapiArticale.image.childImageSharp.fluid} />
     <p>{data.strapiArticale.content}</p>
   </Layout>
